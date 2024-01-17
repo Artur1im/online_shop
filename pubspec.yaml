@@ -10,6 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.3
+  bloc: ^8.1.2
+  http: ^1.2.0
 
   cupertino_icons: ^1.0.2
 
@@ -22,3 +25,9 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+fonts:
+   - family: Big
+     fonts:
+       - asset: font/big.ttf
+uses-material-design: true
