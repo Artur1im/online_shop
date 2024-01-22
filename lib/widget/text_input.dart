@@ -16,10 +16,10 @@ class InputText extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(4)),
               borderSide: BorderSide(width: 1, color: Colors.white),
             ),
-            enabledBorder: OutlineInputBorder(
+            enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.white, width: 2.0),
             ),
-            hintStyle: TextStyle(color: Colors.white),
+            hintStyle: const TextStyle(color: Colors.white),
             hintText: title),
       ),
     );

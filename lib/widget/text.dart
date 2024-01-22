@@ -10,7 +10,7 @@ class BigText extends StatelessWidget {
     return Text(
       title,
       style:
-          const TextStyle(color: Colors.white, fontSize: 50, fontFamily: 'Big'),
+          const TextStyle(color: Colors.white, fontSize: 45, fontFamily: 'Big'),
     );
   }
 }
