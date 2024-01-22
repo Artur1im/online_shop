@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:online_shop/widget/button.dart';
 import 'package:online_shop/widget/text.dart';
 import 'package:online_shop/widget/text_input.dart';
 
@@ -62,13 +63,20 @@ class _AuthorizationState extends State<Authorization> {
                       decoration:
                           const BoxDecoration(color: Colors.transparent)),
                 ),
-                const Align(
+                Align(
                   alignment: Alignment.topCenter,
                   child: Column(children: [
                     BigText(
                       title: 'Welcome!',
                     ),
-                    InputText(title: "login")
+                    InputText(title: "login"),
+                    InputText(title: "password"),
+                    NButton(
+                      title: 'Entrance',
+                    ),
+                    NButton(
+                      title: 'Registration',
+                    )
                   ]),
                 )
               ])),
