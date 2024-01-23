@@ -64,41 +64,52 @@ class _AuthorizationState extends State<Authorization> {
                 child: Container(
                     decoration: const BoxDecoration(color: Colors.transparent)),
               ),
-              Align(
-                alignment: Alignment.topCenter,
-                child: Column(children: [
-                  const SizedBox(height: 50),
+              SizedBox(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Column(children: [
+                          const SizedBox(height: 50),
 
-                  const BigText(
-                    title: 'Welcome!',
-                  ),
-                  const InputText(title: "login"),
-                  const InputText(title: "password"),
-                  NButton(
-                    title: 'Entrance',
-                    onTap: (finish) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Home()),
-                      );
-                    },
-                  ),
-                  NButton(
-                    title: 'Registration',
-                    onTap: (finish) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Registration()),
-                      );
-                    },
-                  )
+                          const BigText(
+                            title: 'Welcome!',
+                          ),
+                          const InputText(title: "login"),
+                          const InputText(title: "password"),
+                          NButton(
+                            title: 'Entrance',
+                            onTap: (finish) {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Home()),
+                              );
+                            },
+                          ),
+                          NButton(
+                            title: 'Registration',
+                            onTap: (finish) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Registration()),
+                              );
+                            },
+                          )
 
-                  // NButton(
-                  //   title: 'Registration',
-                  //   onTap: customAction,
-                  // )
-                ]),
+                          // NButton(
+                          //   title: 'Registration',
+                          //   onTap: customAction,
+                          // )
+                        ]),
+                      ),
+                    ],
+                  ),
+                ),
               )
             ])),
       ),
