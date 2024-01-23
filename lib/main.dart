@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:online_shop/auth/authorization.dart';
+import 'package:online_shop/page/bottom_navigation_bar.dart';
+import 'package:online_shop/page/home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Authorization(),
+      home: Home(),
     );
   }
 }

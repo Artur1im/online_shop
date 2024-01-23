@@ -79,7 +79,7 @@ class _AuthorizationState extends State<Authorization> {
                             title: 'Welcome!',
                           ),
                           const InputText(title: "login"),
-                          const InputText(title: "password"),
+                          const InputTextPassword(title: "password"),
                           NButton(
                             title: 'Entrance',
                             onTap: (finish) {
@@ -99,7 +99,7 @@ class _AuthorizationState extends State<Authorization> {
                                     builder: (context) => const Registration()),
                               );
                             },
-                          )
+                          ),
 
                           // NButton(
                           //   title: 'Registration',

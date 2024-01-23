@@ -64,36 +64,47 @@ class _RegistrationState extends State<Registration> {
                 child: Container(
                     decoration: const BoxDecoration(color: Colors.transparent)),
               ),
-              Align(
-                  alignment: Alignment.topCenter,
+              SizedBox(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                child: SingleChildScrollView(
                   child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 50),
-                        const BigText(
-                          title: 'Registration',
-                        ),
-                        const InputText(title: "Name"),
-                        const InputText(title: "login"),
-                        const InputText(title: "password"),
-                        const InputText(title: "Namber phone"),
-                        NButton(
-                          title: 'Entrance',
-                          onTap: (finish) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Registration()),
-                            );
-                          },
-                        ),
-                        NButton(
-                          title: 'beck',
-                          onTap: (finish) {
-                            Navigator.pop(context);
-                          },
-                        ),
-                      ]))
+                    children: [
+                      Align(
+                          alignment: Alignment.topCenter,
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                const SizedBox(height: 50),
+                                const BigText(
+                                  title: 'Registration',
+                                ),
+                                const InputText(title: "Name"),
+                                const InputText(title: "login"),
+                                const InputTextPassword(title: "password"),
+                                const InputText(title: "Namber phone"),
+                                NButton(
+                                  title: 'Entrance',
+                                  onTap: (finish) {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const Registration()),
+                                    );
+                                  },
+                                ),
+                                NButton(
+                                  title: 'beck',
+                                  onTap: (finish) {
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                              ])),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
