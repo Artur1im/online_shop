@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:online_shop/page/cart.dart';
 
 class BottomNb extends StatefulWidget {
   const BottomNb({Key? key}) : super(key: key);
@@ -29,7 +29,7 @@ class _BottomNbState extends State<BottomNb> {
     const Page2(),
     const Page3(),
     const Page4(),
-    const Page5(),
+    const AnimatedVibratingBox(),
   ];
 
   @override
@@ -51,63 +51,61 @@ class _BottomNbState extends State<BottomNb> {
               removeMargins: false,
               bottomBarWidth: 500,
               durationInMilliSeconds: 300,
-              bottomBarItems: [
-                const BottomBarItem(
+              bottomBarItems: const [
+                BottomBarItem(
                   inActiveItem: Icon(
-                    Icons.home_filled,
+                    Icons.person,
                     color: Colors.blueGrey,
                   ),
                   activeItem: Icon(
-                    Icons.home_filled,
-                    color: Colors.blueAccent,
+                    Icons.person,
+                    color: Colors.white,
                   ),
                   itemLabel: 'Page 1',
                 ),
-                const BottomBarItem(
+                BottomBarItem(
                   inActiveItem: Icon(
-                    Icons.star,
+                    Icons.star_border,
                     color: Colors.blueGrey,
                   ),
                   activeItem: Icon(
                     Icons.star,
-                    color: Colors.blueAccent,
+                    color: Colors.yellowAccent,
                   ),
                   itemLabel: 'Page 2',
                 ),
-
-                ///svg example
                 BottomBarItem(
-                  inActiveItem: SvgPicture.asset(
-                    'assets/search_icon.svg',
+                  inActiveItem: Icon(
+                    Icons.home,
                     color: Colors.blueGrey,
                   ),
-                  activeItem: SvgPicture.asset(
-                    'assets/search_icon.svg',
+                  activeItem: Icon(
+                    Icons.home,
                     color: Colors.white,
                   ),
                   itemLabel: 'Page 3',
                 ),
-                const BottomBarItem(
+                BottomBarItem(
                   inActiveItem: Icon(
-                    Icons.settings,
+                    Icons.shopping_bag_rounded,
                     color: Colors.blueGrey,
                   ),
                   activeItem: Icon(
-                    Icons.settings,
-                    color: Colors.pink,
-                  ),
-                  itemLabel: 'Page 4',
-                ),
-                const BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.person,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.person,
-                    color: Colors.yellow,
+                    Icons.shopping_bag_outlined,
+                    color: Colors.white,
                   ),
                   itemLabel: 'Page 5',
+                ),
+                BottomBarItem(
+                  inActiveItem: Icon(
+                    Icons.settings,
+                    color: Colors.blueGrey,
+                  ),
+                  activeItem: Icon(
+                    Icons.settings,
+                    color: Colors.blueAccent,
+                  ),
+                  itemLabel: 'Page 4',
                 ),
               ],
               onTap: (index) {
@@ -157,16 +155,5 @@ class Page4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.blue, child: const Center(child: Text('Page 4')));
-  }
-}
-
-class Page5 extends StatelessWidget {
-  const Page5({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        color: Colors.lightGreenAccent,
-        child: const Center(child: Text('Page 5')));
   }
 }

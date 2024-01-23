@@ -5,6 +5,7 @@ import 'package:nice_buttons/nice_buttons.dart';
 class NButton extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final title;
+  // ignore: prefer_typing_uninitialized_variables
   final onTap;
   const NButton({super.key, this.title, required this.onTap});
 
@@ -21,7 +22,7 @@ class NButton extends StatelessWidget {
         onTap: onTap,
         child: Text(
           title,
-          style: TextStyle(color: Colors.white, fontSize: 18),
+          style: const TextStyle(color: Colors.white, fontSize: 18),
         ),
       ),
     );

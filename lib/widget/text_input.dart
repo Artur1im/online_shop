@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class InputText extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
-
   final title;
   const InputText({super.key, this.title});
 
@@ -29,17 +28,16 @@ class InputText extends StatelessWidget {
 
 class InputTextPassword extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
-
   final title;
   const InputTextPassword({super.key, this.title});
 
   @override
   Widget build(BuildContext context) {
-    bool _isHidden = true;
+    bool isHidden = true;
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: TextField(
-        obscureText: _isHidden,
+        obscureText: isHidden,
         style: const TextStyle(color: Colors.white),
         decoration: InputDecoration(
             focusedBorder: const OutlineInputBorder(

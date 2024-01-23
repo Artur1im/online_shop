@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:online_shop/page/bottom_navigation_bar.dart';
-import 'package:online_shop/page/cart.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,12 +13,14 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.purple,
+        extendBodyBehindAppBar: true,
         appBar: AppBar(
-          centerTitle: true,
-          title: Text('Home'),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          systemOverlayStyle:
+              const SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
         ),
-        body: Container(
-          child: BottomNb(),
-        ));
+        body: const BottomNb());
   }
 }
