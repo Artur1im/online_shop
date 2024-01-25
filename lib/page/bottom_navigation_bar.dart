@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:online_shop/page/cart.dart';
+import 'package:online_shop/page/home.dart';
 import 'package:online_shop/page/person.dart';
 
 class BottomNb extends StatefulWidget {
@@ -28,7 +29,7 @@ class _BottomNbState extends State<BottomNb> {
   final List<Widget> bottomBarPages = [
     const Person(),
     const Page2(),
-    const Page3(),
+    const Home(),
     const Page4(),
     const AnimatedVibratingBox(),
   ];
@@ -126,16 +127,6 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.green, child: const Center(child: Text('Page 2')));
-  }
-}
-
-class Page3 extends StatelessWidget {
-  const Page3({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        color: Colors.red, child: const Center(child: Text('Page 3')));
   }
 }
 

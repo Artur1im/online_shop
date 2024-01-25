@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop/widget/colors.dart';
 
 class InputText extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
@@ -49,6 +50,36 @@ class InputTextPassword extends StatelessWidget {
             ),
             hintStyle: const TextStyle(color: Colors.white),
             hintText: title),
+      ),
+    );
+  }
+}
+
+class SerchInput extends StatelessWidget {
+  const SerchInput({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      decoration: InputDecoration(
+        enabledBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: Colors.white, width: 2.0),
+            borderRadius: BorderRadius.circular(30)),
+        prefixIcon: const Icon(
+          Icons.search,
+          color: AppColors.white,
+        ),
+        suffixIcon: const Icon(
+          Icons.filter_alt_outlined,
+          color: AppColors.white,
+        ),
+        hintText: 'Поиск...',
+        hintStyle: const TextStyle(color: AppColors.white),
+        border: const OutlineInputBorder(
+            borderSide: BorderSide(width: 1, color: Colors.white),
+            borderRadius: BorderRadius.all(
+              Radius.circular(30),
+            )),
       ),
     );
   }
