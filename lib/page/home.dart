@@ -12,15 +12,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         backgroundColor: Colors.purple,
         extendBodyBehindAppBar: true,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          systemOverlayStyle:
-              const SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
-        ),
-        body: const BottomNb());
+        body: BottomNb());
   }
 }
