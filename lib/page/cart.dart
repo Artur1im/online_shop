@@ -73,6 +73,39 @@ class _CartState extends State<Cart> {
                           onPressed: () {}, icon: const Icon(Icons.more_horiz)),
                     ],
                   ),
+                  const Divider(
+                    color: Colors.grey,
+                  ),
+                  Container(
+                    margin:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const BigText(
+                          size: 30,
+                          title: "120 \$",
+                          color: Colors.black,
+                        ),
+                        InkWell(
+                          child: Container(
+                            width: 70,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              color: Colors.purple,
+                              borderRadius: BorderRadius.circular(5.0),
+                            ),
+                            child: const Center(
+                              child: BigText(
+                                size: 16,
+                                title: 'buy',
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
                 ]),
               ),
             ]),

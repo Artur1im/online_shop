@@ -29,9 +29,12 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+  assets:
+   - assets/img/
+   
 
 fonts:
    - family: Big
      fonts:
-       - asset: font/big.ttf
+       - asset: assets/font/big.ttf
 uses-material-design: true

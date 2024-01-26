@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:online_shop/page/bottom_navigation_bar.dart';
-import 'package:online_shop/page/home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

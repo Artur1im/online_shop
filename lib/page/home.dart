@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:online_shop/page/bottom_navigation_bar.dart';
 import 'package:online_shop/widget/colors.dart';
+import 'package:online_shop/widget/scroll.dart';
 import 'package:online_shop/widget/text_input.dart';
 
 class Home extends StatefulWidget {
@@ -37,8 +37,20 @@ class _HomeState extends State<Home> {
             ),
           ),
         ),
-        // backgroundColor: Colors.purple,
         extendBodyBehindAppBar: true,
-        body: Container());
+        body: Container(
+            padding: const EdgeInsets.only(top: 150),
+            alignment: Alignment.topCenter,
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              children: [
+                Scroll(),
+                // Image.asset(
+                //   'assets/img/qr-code.png',
+                //   width: 100,
+                // )
+              ],
+            )));
   }
 }
