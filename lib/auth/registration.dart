@@ -78,6 +78,7 @@ class _RegistrationState extends State<Registration> {
                                 const SizedBox(height: 50),
                                 const BigText(
                                   title: 'Registration',
+                                  size: 35,
                                 ),
                                 const InputText(title: "Name"),
                                 const InputText(title: "login"),

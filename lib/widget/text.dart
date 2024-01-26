@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class BigText extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final title;
-  const BigText({super.key, this.title});
+  final double size;
+  const BigText({super.key, this.title, required this.size});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
-      style:
-          const TextStyle(color: Colors.white, fontSize: 45, fontFamily: 'Big'),
+      style: TextStyle(color: Colors.white, fontSize: size, fontFamily: 'Big'),
     );
   }
 }

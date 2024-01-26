@@ -77,6 +77,7 @@ class _AuthorizationState extends State<Authorization> {
 
                           const BigText(
                             title: 'Welcome!',
+                            size: 35,
                           ),
                           const InputText(title: "login"),
                           const InputTextPassword(title: "password"),
