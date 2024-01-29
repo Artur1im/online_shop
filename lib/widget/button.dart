@@ -28,3 +28,45 @@ class NButton extends StatelessWidget {
     );
   }
 }
+
+class ButtonforOrder extends StatelessWidget {
+  const ButtonforOrder({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 15),
+      child: DecoratedBox(
+          decoration: BoxDecoration(
+              gradient: const LinearGradient(colors: [
+                Colors.blueAccent,
+                Colors.redAccent,
+                Colors.purpleAccent
+                //add more colors
+              ]),
+              borderRadius: BorderRadius.circular(5),
+              boxShadow: const <BoxShadow>[
+                BoxShadow(
+                    color: Color.fromRGBO(0, 0, 0, 0.57), //shadow for button
+                    blurRadius: 5) //blur radius of shadow
+              ]),
+          child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.transparent,
+                onSurface: Colors.transparent,
+                shadowColor: Colors.transparent,
+              ),
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.only(
+                  top: 18,
+                  bottom: 18,
+                ),
+                child: Text(
+                  "Оформить заказ",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ))),
+    );
+  }
+}

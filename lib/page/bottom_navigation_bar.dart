@@ -32,7 +32,7 @@ class _BottomNbState extends State<BottomNb> {
     const Cart(),
     const Home(),
     const Page4(),
-    const AnimatedVibratingBox(),
+    MyLoadingScreen(),
   ];
 
   @override

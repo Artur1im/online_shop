@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop/widget/button.dart';
+import 'package:online_shop/widget/card.dart';
 import 'package:online_shop/widget/colors.dart';
 import 'package:online_shop/widget/counter.dart';
 import 'package:online_shop/widget/text.dart';
@@ -31,75 +33,20 @@ class _CartState extends State<Cart> {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          child: Column(
-            children: [
-              Card(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Image.network(
-                            'https://images.satu.kz/204663480_w640_h640_krossovki-nike-sb.jpg',
-                            width: 100,
-                          ),
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            SizedBox(height: 30),
-                            Counter(),
-                          ],
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.more_horiz),
-                        ),
-                      ],
-                    ),
-                    const Divider(
-                      color: Colors.grey,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 5),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const BigText(
-                            size: 30,
-                            title: "120 \$",
-                            color: Colors.black,
-                          ),
-                          InkWell(
-                            child: Container(
-                              width: 70,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                color: Colors.purple,
-                                borderRadius: BorderRadius.circular(5.0),
-                              ),
-                              child: const Center(
-                                child: BigText(
-                                  size: 16,
-                                  title: 'buy',
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ],
+          child: const SingleChildScrollView(
+            child: Column(
+              children: [
+                CardForCart(),
+                CardForCart(),
+                CardForCart(),
+                CardForCart(),
+                CardForCart(),
+                ButtonforOrder(),
+                SizedBox(
+                  height: 100,
+                )
+              ],
+            ),
           ),
         ));
   }
