@@ -44,42 +44,40 @@ class _PersonState extends State<Person> {
         padding: const EdgeInsets.only(top: 5),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: const SingleChildScrollView(
-          child: Column(
-            children: [
-              Card(
-                  color: Color.fromRGBO(235, 235, 235, 1),
-                  child: Column(
-                    children: [
-                      ListTile(
-                        title: Text('Item 1'),
-                        subtitle: Text('Subtitle 1'),
-                        trailing: Icon(
-                          Icons.navigate_next_outlined,
-                          size: 30,
-                        ),
+        child: Column(
+          children: [
+            Card(
+                color: Color.fromRGBO(235, 235, 235, 1),
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: Text('Item 1'),
+                      subtitle: Text('Subtitle 1'),
+                      trailing: Icon(
+                        Icons.navigate_next_outlined,
+                        size: 30,
                       ),
-                      Divider(),
-                      ListTile(
-                        title: Text('Item 2'),
-                        subtitle: Text('Subtitle 2'),
-                        trailing: Icon(
-                          Icons.navigate_next_outlined,
-                          size: 30,
-                        ),
+                    ),
+                    Divider(),
+                    ListTile(
+                      title: Text('Item 2'),
+                      subtitle: Text('Subtitle 2'),
+                      trailing: Icon(
+                        Icons.navigate_next_outlined,
+                        size: 30,
                       ),
-                    ],
-                  )),
-              CastCard(
-                title: 'Name',
-                subtitle: 'last name',
-                trailing: Icon(
-                  Icons.navigate_next_outlined,
-                  size: 30,
-                ),
-              )
-            ],
-          ),
+                    ),
+                  ],
+                )),
+            CastCard(
+              title: 'Name',
+              subtitle: 'last name',
+              trailing: Icon(
+                Icons.navigate_next_outlined,
+                size: 30,
+              ),
+            )
+          ],
         ),
       ),
     );

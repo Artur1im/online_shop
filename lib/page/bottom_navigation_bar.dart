@@ -46,75 +46,80 @@ class _BottomNbState extends State<BottomNb> {
       ),
       extendBody: true,
       bottomNavigationBar: (bottomBarPages.length <= maxCount)
-          ? AnimatedNotchBottomBar(
-              notchBottomBarController: _controller,
-              color: Colors.white,
-              showLabel: false,
-              notchColor: Colors.black87,
-              removeMargins: false,
-              bottomBarWidth: 500,
-              durationInMilliSeconds: 300,
-              bottomBarItems: const [
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.person,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.person,
-                    color: Colors.white,
-                  ),
-                  itemLabel: 'Page 1',
+          ? SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: SingleChildScrollView(
+                child: AnimatedNotchBottomBar(
+                  notchBottomBarController: _controller,
+                  color: Colors.white,
+                  showLabel: false,
+                  notchColor: Colors.black87,
+                  removeMargins: false,
+                  bottomBarWidth: 500,
+                  durationInMilliSeconds: 300,
+                  bottomBarItems: const [
+                    BottomBarItem(
+                      inActiveItem: Icon(
+                        Icons.person,
+                        color: Colors.blueGrey,
+                      ),
+                      activeItem: Icon(
+                        Icons.person,
+                        color: Colors.white,
+                      ),
+                      itemLabel: 'Page 1',
+                    ),
+                    BottomBarItem(
+                      inActiveItem: Icon(
+                        Icons.star_border,
+                        color: Colors.blueGrey,
+                      ),
+                      activeItem: Icon(
+                        Icons.star,
+                        color: Colors.yellowAccent,
+                      ),
+                      itemLabel: 'Page 2',
+                    ),
+                    BottomBarItem(
+                      inActiveItem: Icon(
+                        Icons.home,
+                        color: Colors.blueGrey,
+                      ),
+                      activeItem: Icon(
+                        Icons.home,
+                        color: Colors.white,
+                      ),
+                      itemLabel: 'Page 3',
+                    ),
+                    BottomBarItem(
+                      inActiveItem: Icon(
+                        Icons.shopping_bag_rounded,
+                        color: Colors.blueGrey,
+                      ),
+                      activeItem: Icon(
+                        Icons.shopping_bag_outlined,
+                        color: Colors.white,
+                      ),
+                      itemLabel: 'Page 5',
+                    ),
+                    BottomBarItem(
+                      inActiveItem: Icon(
+                        Icons.settings,
+                        color: Colors.blueGrey,
+                      ),
+                      activeItem: Icon(
+                        Icons.settings,
+                        color: Colors.blueAccent,
+                      ),
+                      itemLabel: 'Page 4',
+                    ),
+                  ],
+                  onTap: (index) {
+                    log('current selected index $index');
+                    _pageController.jumpToPage(index);
+                  },
                 ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.star_border,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.star,
-                    color: Colors.yellowAccent,
-                  ),
-                  itemLabel: 'Page 2',
-                ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.home,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.home,
-                    color: Colors.white,
-                  ),
-                  itemLabel: 'Page 3',
-                ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.shopping_bag_rounded,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.shopping_bag_outlined,
-                    color: Colors.white,
-                  ),
-                  itemLabel: 'Page 5',
-                ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.settings,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.settings,
-                    color: Colors.blueAccent,
-                  ),
-                  itemLabel: 'Page 4',
-                ),
-              ],
-              onTap: (index) {
-                log('current selected index $index');
-                _pageController.jumpToPage(index);
-              },
+              ),
             )
           : null,
     );

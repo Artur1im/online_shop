@@ -11,12 +11,9 @@ class Scroll extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  // margin: const EdgeInsets.all(6),
-                  child: Image.asset(
-                    'assets/img/qr-code.png',
-                    width: 70,
-                  ),
+                Image.asset(
+                  'assets/img/qr-code.png',
+                  width: 70,
                 ),
                 const Column(
                   children: [
@@ -34,7 +31,7 @@ class Scroll extends StatelessWidget {
             )),
       ),
     ),
-    Center(
+    const Center(
       child: SizedBox(
         height: 70 + (30),
         child: Card(

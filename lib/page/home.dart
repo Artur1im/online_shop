@@ -29,28 +29,29 @@ class _HomeState extends State<Home> {
               style: TextStyle(color: Colors.white),
             ),
             bottom: const PreferredSize(
-              preferredSize: Size.fromHeight(40),
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: SerchInput(),
-              ),
-            ),
+                preferredSize: Size.fromHeight(40),
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SerchInput(),
+                )),
           ),
         ),
-        extendBodyBehindAppBar: true,
         body: Container(
-            padding: const EdgeInsets.only(top: 150),
-            alignment: Alignment.topCenter,
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: Column(
-              children: [
-                Scroll(),
-                // Image.asset(
-                //   'assets/img/qr-code.png',
-                //   width: 100,
-                // )
-              ],
-            )));
+            // alignment: Alignment.topCenter,
+            // height: MediaQuery.of(context).size.height,
+            // width: MediaQuery.of(context).size.width,
+            child: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            children: [
+              Scroll(),
+              // Image.asset(
+              //   'assets/img/qr-code.png',
+              //   width: 100,
+              // )
+            ],
+          ),
+        )));
   }
 }
