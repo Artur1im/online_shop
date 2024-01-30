@@ -105,3 +105,22 @@ class CardForCart extends StatelessWidget {
     );
   }
 }
+
+class UniversalCard extends StatelessWidget {
+  dynamic widget;
+  UniversalCard({super.key, required this.widget});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+        side: const BorderSide(
+          color: Colors.grey,
+          width: 2.0,
+        ),
+      ),
+      child: Padding(padding: EdgeInsets.all(16.0), child: widget),
+    );
+  }
+}
