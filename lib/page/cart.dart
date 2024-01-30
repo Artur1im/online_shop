@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop/page/payment.dart';
 import 'package:online_shop/widget/button.dart';
 import 'package:online_shop/widget/card.dart';
 import 'package:online_shop/widget/colors.dart';
@@ -33,7 +34,7 @@ class _CartState extends State<Cart> {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          child: const SingleChildScrollView(
+          child: SingleChildScrollView(
             child: Column(
               children: [
                 CardForCart(),
@@ -41,7 +42,15 @@ class _CartState extends State<Cart> {
                 CardForCart(),
                 CardForCart(),
                 CardForCart(),
-                ButtonforOrder(),
+                ButtonforOrder(
+                    title: 'Оформить заказ',
+                    onPress: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Payment()),
+                      );
+                    }),
                 SizedBox(
                   height: 100,
                 )

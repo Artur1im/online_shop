@@ -3,11 +3,9 @@ import 'package:nice_buttons/nice_buttons.dart';
 
 // ignore: must_be_immutable
 class NButton extends StatelessWidget {
-  // ignore: prefer_typing_uninitialized_variables
-  final title;
-  // ignore: prefer_typing_uninitialized_variables
-  final onTap;
-  const NButton({super.key, this.title, required this.onTap});
+  String title;
+  dynamic onTap;
+  NButton({super.key, required this.title, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +28,9 @@ class NButton extends StatelessWidget {
 }
 
 class ButtonforOrder extends StatelessWidget {
-  const ButtonforOrder({super.key});
+  String title;
+  dynamic onPress;
+  ButtonforOrder({super.key, required this.title, required this.onPress});
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +42,10 @@ class ButtonforOrder extends StatelessWidget {
                 Colors.blueAccent,
                 Colors.redAccent,
                 Colors.purpleAccent
-                //add more colors
               ]),
               borderRadius: BorderRadius.circular(5),
               boxShadow: const <BoxShadow>[
-                BoxShadow(
-                    color: Color.fromRGBO(0, 0, 0, 0.57), //shadow for button
-                    blurRadius: 5) //blur radius of shadow
+                BoxShadow(color: Color.fromRGBO(0, 0, 0, 0.57), blurRadius: 5)
               ]),
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -56,14 +53,14 @@ class ButtonforOrder extends StatelessWidget {
                 onSurface: Colors.transparent,
                 shadowColor: Colors.transparent,
               ),
-              onPressed: () {},
-              child: const Padding(
-                padding: EdgeInsets.only(
+              onPressed: onPress,
+              child: Padding(
+                padding: const EdgeInsets.only(
                   top: 18,
                   bottom: 18,
                 ),
                 child: Text(
-                  "Оформить заказ",
+                  title,
                   style: TextStyle(color: Colors.white),
                 ),
               ))),
