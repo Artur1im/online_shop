@@ -3,4 +3,10 @@ part of 'shop_bloc.dart';
 @immutable
 sealed class ShopState {}
 
-final class ShopInitial extends ShopState {}
+class ShopInitial extends ShopState {}
+
+class ShopsFetchingLoadingState extends ShopState {}
+
+class ShopFetchingErrorState extends ShopState {}
+
+class ShopFetchingSuccessFulState extends ShopState {}
