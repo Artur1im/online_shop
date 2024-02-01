@@ -12,7 +12,7 @@ class CastCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        color: Color.fromRGBO(235, 235, 235, 1),
+        color: const Color.fromRGBO(235, 235, 235, 1),
         child: Column(
           children: [
             ListTile(
@@ -106,6 +106,7 @@ class CardForCart extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class UniversalCard extends StatelessWidget {
   dynamic widget;
   UniversalCard({super.key, required this.widget});

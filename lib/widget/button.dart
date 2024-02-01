@@ -27,6 +27,7 @@ class NButton extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class ButtonforOrder extends StatelessWidget {
   String title;
   dynamic onPress;

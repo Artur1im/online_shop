@@ -3,7 +3,6 @@ import 'package:online_shop/page/payment.dart';
 import 'package:online_shop/widget/button.dart';
 import 'package:online_shop/widget/card.dart';
 import 'package:online_shop/widget/colors.dart';
-import 'package:online_shop/widget/counter.dart';
 import 'package:online_shop/widget/text.dart';
 
 class Cart extends StatefulWidget {
