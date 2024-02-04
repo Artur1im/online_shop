@@ -44,11 +44,12 @@ class CardForCart extends StatelessWidget {
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return const SpinKitDancingSquare(
-                        color: Colors.blueAccent,
+                        color: Colors.purple,
                         size: 100,
                       );
                     } else if (snapshot.hasError) {
-                      return const Text('Ошибка загрузки');
+                      // доработать поле ошибки
+                      return const Text('Ошибка загрузки ');
                     } else {
                       return Image.network(
                         'https://images.satu.kz/204663480_w640_h640_krossovki-nike-sb.jpg',
@@ -120,7 +121,6 @@ class CardForCart extends StatelessWidget {
   }
 
   Future<String> loadImageFromNetwork() async {
-    await Future.delayed(Duration(seconds: 3));
     return 'https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/09/instagram-image-size.jpg'; // Замените URL на реальный
   }
 }

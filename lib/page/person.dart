@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop/page/test.dart';
 import 'package:online_shop/widget/card.dart';
 
 class Person extends StatefulWidget {
@@ -44,7 +45,7 @@ class _PersonState extends State<Person> {
         padding: const EdgeInsets.only(top: 5),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: const SingleChildScrollView(
+        child: SingleChildScrollView(
           child: Column(
             children: [
               CastCard(
@@ -57,7 +58,15 @@ class _PersonState extends State<Person> {
               ),
               SizedBox(
                 height: 100,
-              )
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Test()),
+                    );
+                  },
+                  child: Text('sdfdsfdsfdsfdsf'))
             ],
           ),
         ),

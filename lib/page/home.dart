@@ -45,14 +45,13 @@ class _HomeState extends State<Home> {
             child: Column(
               children: [
                 Scroll(),
-                Image.asset(
-                  'assets/img/qr-code.png',
-                  width: 100,
-                ),
                 CardForCart(),
                 CardForCart(),
                 CardForCart(),
                 CardForCart(),
+                SizedBox(
+                  height: 100,
+                )
               ],
             ),
           ),
