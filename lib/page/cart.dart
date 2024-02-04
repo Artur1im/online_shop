@@ -3,7 +3,6 @@ import 'package:online_shop/page/payment.dart';
 import 'package:online_shop/widget/button.dart';
 import 'package:online_shop/widget/card.dart';
 import 'package:online_shop/widget/colors.dart';
-import 'package:online_shop/widget/text.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
@@ -18,9 +17,9 @@ class _CartState extends State<Cart> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: AppColors.primaryColor,
-          title: const BigText(
-            title: 'Cart',
-            size: 35,
+          title: const Text(
+            'Cart',
+            style: TextStyle(color: Colors.white, fontSize: 35),
           ),
           actions: [
             Container(

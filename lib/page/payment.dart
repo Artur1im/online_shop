@@ -24,7 +24,6 @@ class PpaymentState extends State<Payment> {
             child: BigText(
               size: 25,
               title: 'Оплата заказа',
-              color: Colors.black,
             ),
           ),
           UniversalCard(
@@ -60,7 +59,6 @@ class PpaymentState extends State<Payment> {
           const BigText(
             size: 30,
             title: '1.200 \$',
-            color: Colors.black,
           ),
           SizedBox(
               width: double.infinity,
@@ -71,7 +69,6 @@ class PpaymentState extends State<Payment> {
             child: BigText(
               size: 20,
               title: 'Select a Payment Method',
-              color: Colors.grey,
             ),
           ),
           UniversalCard(
@@ -89,7 +86,6 @@ class PpaymentState extends State<Payment> {
                 BigText(
                   title: 'Credit Card',
                   size: 18,
-                  color: Colors.black,
                 )
               ],
             ),
@@ -109,7 +105,6 @@ class PpaymentState extends State<Payment> {
                 BigText(
                   title: 'Сash payment',
                   size: 18,
-                  color: Colors.black,
                 )
               ],
             ),

@@ -13,15 +13,13 @@ class CastCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        color: const Color.fromRGBO(235, 235, 235, 1),
+        // color: const Color.fromRGBO(235, 235, 235, 1),
         child: Column(
-          children: [
-            ListTile(
-                title: Text(title),
-                subtitle: Text(subtitle),
-                trailing: trailing),
-          ],
-        ));
+      children: [
+        ListTile(
+            title: Text(title), subtitle: Text(subtitle), trailing: trailing),
+      ],
+    ));
   }
 }
 
@@ -94,7 +92,6 @@ class CardForCart extends StatelessWidget {
                 const BigText(
                   size: 30,
                   title: "120 \$",
-                  color: Colors.black,
                 ),
                 InkWell(
                   child: Container(
@@ -105,11 +102,10 @@ class CardForCart extends StatelessWidget {
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                     child: const Center(
-                      child: BigText(
-                        size: 16,
-                        title: 'buy',
-                      ),
-                    ),
+                        child: Text(
+                      'Buy',
+                      style: TextStyle(color: Colors.white),
+                    )),
                   ),
                 ),
               ],
