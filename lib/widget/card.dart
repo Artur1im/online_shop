@@ -57,12 +57,12 @@ class CardForCart extends StatelessWidget {
                   },
                 ),
               ),
-              Column(
+              const Column(
                 children: [
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 100,
                     child: Text(
                       'Nike - Running shoes are the lightest of all.',
@@ -136,7 +136,7 @@ class UniversalCard extends StatelessWidget {
           width: 2.0,
         ),
       ),
-      child: Padding(padding: EdgeInsets.all(16.0), child: widget),
+      child: Padding(padding: const EdgeInsets.all(16.0), child: widget),
     );
   }
 }

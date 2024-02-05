@@ -64,8 +64,8 @@ class PpaymentState extends State<Payment> {
               width: double.infinity,
               child: ButtonforOrder(title: 'Сheckout', onPress: () {})),
           const SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 5, left: 5),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 5, left: 5),
             child: BigText(
               size: 20,
               title: 'Select a Payment Method',

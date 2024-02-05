@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Counter extends StatefulWidget {
+  const Counter({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _CounterState createState() => _CounterState();
 }
 
@@ -39,12 +42,12 @@ class _CounterState extends State<Counter> {
             child: const Icon(Icons.remove, color: Colors.white),
           ),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Text(
           '$_counter',
-          style: TextStyle(fontSize: 24),
+          style: const TextStyle(fontSize: 24),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         InkWell(
           onTap: _incrementCounter,
           child: Container(

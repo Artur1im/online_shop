@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:online_shop/widget/card.dart';
 import 'package:online_shop/widget/colors.dart';
 import 'package:online_shop/widget/scroll.dart';
@@ -37,24 +36,23 @@ class _HomeState extends State<Home> {
                 )),
           ),
         ),
-        body: Container(
-            child: SizedBox(
+        body: SizedBox(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
             child: Column(
               children: [
                 Scroll(),
-                CardForCart(),
-                CardForCart(),
-                CardForCart(),
-                CardForCart(),
-                SizedBox(
+                const CardForCart(),
+                const CardForCart(),
+                const CardForCart(),
+                const CardForCart(),
+                const SizedBox(
                   height: 100,
                 )
               ],
             ),
           ),
-        )));
+        ));
   }
 }

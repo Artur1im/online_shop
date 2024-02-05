@@ -35,11 +35,11 @@ class _CartState extends State<Cart> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                CardForCart(),
-                CardForCart(),
-                CardForCart(),
-                CardForCart(),
-                CardForCart(),
+                const CardForCart(),
+                const CardForCart(),
+                const CardForCart(),
+                const CardForCart(),
+                const CardForCart(),
                 ButtonforOrder(
                     title: 'Оформить заказ',
                     onPress: () {
@@ -49,7 +49,7 @@ class _CartState extends State<Cart> {
                             builder: (context) => const Payment()),
                       );
                     }),
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 )
               ],

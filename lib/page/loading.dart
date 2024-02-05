@@ -74,7 +74,10 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:vibration/vibration.dart';
 
 class MyLoadingScreen extends StatefulWidget {
+  const MyLoadingScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _MyLoadingScreenState createState() => _MyLoadingScreenState();
 }
 
@@ -88,7 +91,7 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
   }
 
   void simulateLoading() {
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       setState(() {
         isLoading = false;
       });
@@ -105,7 +108,7 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Loading Screen'),
+        title: const Text('Loading Screen'),
       ),
       body: Center(
         child: GridView.count(

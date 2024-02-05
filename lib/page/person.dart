@@ -48,7 +48,7 @@ class _PersonState extends State<Person> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              CastCard(
+              const CastCard(
                 title: 'Name',
                 subtitle: 'last name',
                 trailing: Icon(
@@ -56,17 +56,17 @@ class _PersonState extends State<Person> {
                   size: 30,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 100,
               ),
               ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Test()),
+                      MaterialPageRoute(builder: (context) => const Test()),
                     );
                   },
-                  child: Text('sdfdsfdsfdsfdsf'))
+                  child: const Text('sdfdsfdsfdsfdsf'))
             ],
           ),
         ),

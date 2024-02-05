@@ -40,7 +40,7 @@ class Scroll extends StatelessWidget {
         ),
       ),
     ),
-    Center(
+    const Center(
       child: SizedBox(
         height: 70 + (30),
         child: Card(
@@ -49,7 +49,7 @@ class Scroll extends StatelessWidget {
         ),
       ),
     ),
-    Center(
+    const Center(
       child: SizedBox(
         height: 70 + (30),
         child: Card(
@@ -58,7 +58,7 @@ class Scroll extends StatelessWidget {
         ),
       ),
     ),
-    Center(
+    const Center(
       child: SizedBox(
         height: 70 + (30),
         child: Card(
