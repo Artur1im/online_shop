@@ -86,8 +86,7 @@ class _AuthorizationState extends State<Authorization> {
                             onTap: (finish) {
                               Navigator.pushReplacement(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => const Home()),
+                                MaterialPageRoute(builder: (context) => Home()),
                               );
                             },
                           ),

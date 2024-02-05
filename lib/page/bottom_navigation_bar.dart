@@ -30,7 +30,7 @@ class _BottomNbState extends State<BottomNb> {
   final List<Widget> bottomBarPages = [
     const Person(),
     const Cart(),
-    const Home(),
+    Home(),
     Page4(),
     MyLoadingScreen(),
   ];

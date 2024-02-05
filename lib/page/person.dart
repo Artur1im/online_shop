@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:online_shop/bloc/shop_bloc.dart';
 import 'package:online_shop/page/test.dart';
 import 'package:online_shop/widget/card.dart';
 
@@ -10,6 +12,7 @@ class Person extends StatefulWidget {
 }
 
 class _PersonState extends State<Person> {
+// final ShopBloc shopBloc = ShopBloc();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +44,12 @@ class _PersonState extends State<Person> {
           )
         ],
       ),
-      body: Container(
+      body:
+          //  BlocBuilder<ShopBloc, ShopState>(
+          //   bloc: shopBloc,
+          //   builder: (context, state) {
+          //     return
+          Container(
         padding: const EdgeInsets.only(top: 5),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -70,6 +78,8 @@ class _PersonState extends State<Person> {
             ],
           ),
         ),
+        //   );
+        // },
       ),
     );
   }

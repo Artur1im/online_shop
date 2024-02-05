@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop/bloc/shop_bloc.dart';
 import 'package:online_shop/widget/card.dart';
 import 'package:online_shop/widget/colors.dart';
 import 'package:online_shop/widget/scroll.dart';
 import 'package:online_shop/widget/text_input.dart';
 
 class Home extends StatefulWidget {
-  const Home({super.key});
+  Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
+  // final ShopBloc shopBloc = ShopBloc();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +38,12 @@ class _HomeState extends State<Home> {
                 )),
           ),
         ),
-        body: SizedBox(
+        body:
+            //  BlocBuilder<SubjectBloc, SubjectState>(
+            //   builder: (context, state) {
+            //     bloc: shopBloc
+            //     return
+            SizedBox(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
@@ -53,6 +60,9 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
-        ));
+        )
+        // },
+        // )
+        );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:online_shop/bloc/shop_bloc.dart';
 import 'package:online_shop/page/payment.dart';
 import 'package:online_shop/widget/button.dart';
 import 'package:online_shop/widget/card.dart';
@@ -12,6 +14,7 @@ class Cart extends StatefulWidget {
 }
 
 class _CartState extends State<Cart> {
+// final ShopBloc shopBloc = ShopBloc();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +31,12 @@ class _CartState extends State<Cart> {
                     const Text('Choose', style: TextStyle(color: Colors.white)))
           ],
         ),
-        body: Container(
+        body:
+
+            //  BlocBuilder<ShopBloc, ShopState>(
+            //   builder: (context, state) {
+            //     return
+            Container(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
@@ -45,8 +53,7 @@ class _CartState extends State<Cart> {
                     onPress: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => const Payment()),
+                        MaterialPageRoute(builder: (context) => Payment()),
                       );
                     }),
                 const SizedBox(
@@ -55,6 +62,8 @@ class _CartState extends State<Cart> {
               ],
             ),
           ),
+          //   );
+          // },
         ));
   }
 }

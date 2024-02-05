@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:online_shop/bloc/shop_bloc.dart';
 import 'package:online_shop/widget/button.dart';
 import 'package:online_shop/widget/card.dart';
 import 'package:online_shop/widget/text.dart';
@@ -7,14 +9,20 @@ class Payment extends StatefulWidget {
   const Payment({super.key});
 
   @override
-  State<Payment> createState() => PpaymentState();
+  State<Payment> createState() => PaymentState();
 }
 
-class PpaymentState extends State<Payment> {
+class PaymentState extends State<Payment> {
+// final ShopBloc shopBloc = ShopBloc();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body:
+          //  BlocBuilder<ShopBloc, ShopState>(
+          //   bloc: shopBloc,
+          //   builder: (context, state) {
+          //     return
+          Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -110,6 +118,8 @@ class PpaymentState extends State<Payment> {
             ),
           )),
         ]),
+        //   );
+        // },
       ),
     );
   }

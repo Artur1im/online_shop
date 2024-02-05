@@ -12,3 +12,24 @@ class ShowShop extends ShopEvent {
 
   ShowShop({required this.shopModel});
 }
+
+// add
+class ShopAdd extends ShopEvent {
+  final ShopModel shopModel;
+
+  ShopAdd({required this.shopModel});
+}
+
+// delete
+class ShopDelete extends ShopEvent {
+  final ShopModel shopModel;
+
+  ShopDelete({required this.shopModel});
+}
+
+// update
+class ShopUpdate extends ShopEvent {
+  final ShopModel shopModel;
+
+  ShopUpdate({required this.shopModel});
+}

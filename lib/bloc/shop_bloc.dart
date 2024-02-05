@@ -13,6 +13,9 @@ class ShopBloc extends Bloc<ShopEvent, ShopState> {
   ShopBloc() : super(ShopInitial()) {
     on<ShopFetchInitial>(shopFetchInitial);
     on<ShopLoadMore>(shopLoadMore);
+    on<ShopAdd>(shopAdd as EventHandler<ShopAdd, ShopState>);
+    on<ShopDelete>(shopDelete as EventHandler<ShopDelete, ShopState>);
+    on<ShopUpdate>(shopUpdate as EventHandler<ShopUpdate, ShopState>);
   }
 
   FutureOr<void> shopFetchInitial(
@@ -34,4 +37,34 @@ class ShopBloc extends Bloc<ShopEvent, ShopState> {
   }
 
   FutureOr<void> _requestAndAddShop() async {}
+
+// add
+  Future<void> shopAdd(
+    ShopLoadMore event,
+    Emitter<ShopState> emit,
+  ) async {
+    emit(ShopsFetchingLoadingState());
+    await _requestAndAddShop();
+    emit(ShopFetchingSuccessFulState());
+  }
+
+// Delete
+  Future<void> shopDelete(
+    ShopLoadMore event,
+    Emitter<ShopState> emit,
+  ) async {
+    emit(ShopsFetchingLoadingState());
+    await _requestAndAddShop();
+    emit(ShopFetchingSuccessFulState());
+  }
+
+// update
+  Future<void> shopUpdate(
+    ShopLoadMore event,
+    Emitter<ShopState> emit,
+  ) async {
+    emit(ShopsFetchingLoadingState());
+    await _requestAndAddShop();
+    emit(ShopFetchingSuccessFulState());
+  }
 }
