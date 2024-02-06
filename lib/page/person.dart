@@ -23,9 +23,6 @@ class _PersonState extends State<Person> {
             bottom: Radius.circular(10),
           ),
         ),
-
-        // toolbarHeight: 10,
-        // backgroundColor: Colors.black,
         leading: const Icon(
           Icons.person,
           color: Colors.white,

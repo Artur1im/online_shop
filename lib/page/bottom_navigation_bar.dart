@@ -57,7 +57,7 @@ class _BottomNbState extends State<BottomNb> {
                     notchBottomBarController: _controller,
                     color: Colors.white,
                     showLabel: false,
-                    notchColor: Colors.black87,
+                    notchColor: Colors.purple,
                     removeMargins: false,
                     bottomBarWidth: 500,
                     durationInMilliSeconds: 300,

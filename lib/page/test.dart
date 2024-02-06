@@ -21,7 +21,7 @@ class _TestState extends State<Test> {
         ),
         body: Center(
           child: Text(
-            'Привет, это приложение с переключением темы!',
+            '',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
         ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:online_shop/bloc/shop_bloc.dart';
 import 'package:online_shop/page/bottom_navigation_bar.dart';
 
 void main() {
@@ -13,7 +15,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return
+        // MultiBlocProvider(
+        //   providers: [
+        //     BlocProvider(
+        //       create: (context) => ShopBloc(),
+        //       child:
+        MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       // theme: ThemeData(
@@ -24,5 +32,9 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData.dark(), //
       home: const BottomNb(),
     );
+    // )
+    // ],
+    // child: Text('Что то'),
+    // );
   }
 }

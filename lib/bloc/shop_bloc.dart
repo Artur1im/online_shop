@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:online_shop/api/api.dart';
 import 'package:online_shop/model/shop_model.dart';
 
 part 'shop_event.dart';
@@ -66,5 +67,12 @@ class ShopBloc extends Bloc<ShopEvent, ShopState> {
     emit(ShopsFetchingLoadingState());
     await _requestAndAddShop();
     emit(ShopFetchingSuccessFulState());
+  }
+
+// мб удалить
+  FutureOr<void> _shopAdd() async {
+    List<ShopModel> list = shop;
+
+    shop.addAll(list);
   }
 }
