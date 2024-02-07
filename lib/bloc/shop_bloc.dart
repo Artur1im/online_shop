@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:online_shop/api/api.dart';
 import 'package:online_shop/model/shop_model.dart';
 
 part 'shop_event.dart';

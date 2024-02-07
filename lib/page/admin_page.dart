@@ -1,42 +1,58 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:online_shop/widget/image_picker.dart';
+import 'package:online_shop/widget/text_input.dart';
 
 class AdminPage extends StatefulWidget {
   const AdminPage({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _AdminPageState createState() => _AdminPageState();
+  State<AdminPage> createState() => _AdminPageState();
 }
 
 class _AdminPageState extends State<AdminPage> {
-  File? _image;
-  final picker = ImagePicker();
-
-  Future getImage() async {
-    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
-
-    setState(() {
-      _image = pickedFile != null ? File(pickedFile.path) : null;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Admin Page'),
+        title: const Text('Admin page'),
+        centerTitle: true,
       ),
-      body: Center(
-        child: _image != null
-            ? Image.file(_image!)
-            : const Text('No image selected.'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: getImage,
-        tooltip: 'Pick Image',
-        child: const Icon(Icons.add_a_photo),
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: SingleChildScrollView(
+          child: Column(children: [
+            const ImageP(),
+            const SizedBox(height: 20),
+            InputText(
+              title: 'name',
+              color: Colors.black,
+            ),
+            InputText(
+              title: 'Description',
+              color: Colors.black,
+            ),
+            const Padding(
+              padding: EdgeInsets.all(10.0),
+              child: TextField(
+                style: TextStyle(color: Colors.black),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(4)),
+                      borderSide: BorderSide(width: 1, color: Colors.black),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black, width: 2.0),
+                    ),
+                    hintStyle: TextStyle(color: Colors.black),
+                    hintText: 'price'),
+              ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(onPressed: () {}, child: const Text('load product'))
+          ]),
+        ),
       ),
     );
   }

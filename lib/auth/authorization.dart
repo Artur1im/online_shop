@@ -79,7 +79,10 @@ class _AuthorizationState extends State<Authorization> {
                             title: 'Welcome!',
                             size: 35,
                           ),
-                          const InputText(title: "login"),
+                          InputText(
+                            title: "login",
+                            color: Colors.white,
+                          ),
                           const InputTextPassword(title: "password"),
                           NButton(
                             title: 'Entrance',

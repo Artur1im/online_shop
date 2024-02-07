@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop/bloc/shop_bloc.dart';
 import 'package:online_shop/widget/card.dart';
 import 'package:online_shop/widget/colors.dart';
 import 'package:online_shop/widget/scroll.dart';

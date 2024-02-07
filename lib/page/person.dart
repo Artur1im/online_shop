@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:online_shop/bloc/shop_bloc.dart';
 import 'package:online_shop/page/admin_page.dart';
 import 'package:online_shop/widget/card.dart';
 

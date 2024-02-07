@@ -80,10 +80,19 @@ class _RegistrationState extends State<Registration> {
                                   title: 'Registration',
                                   size: 35,
                                 ),
-                                const InputText(title: "Name"),
-                                const InputText(title: "login"),
+                                InputText(
+                                  title: "Name",
+                                  color: Colors.white,
+                                ),
+                                InputText(
+                                  title: "login",
+                                  color: Colors.white,
+                                ),
                                 const InputTextPassword(title: "password"),
-                                const InputText(title: "Namber phone"),
+                                InputText(
+                                  title: "Namber phone",
+                                  color: Colors.white,
+                                ),
                                 NButton(
                                   title: 'Entrance',
                                   onTap: (finish) {

@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop/widget/colors.dart';
 
+// ignore: must_be_immutable
 class InputText extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
+  dynamic color;
   final title;
-  const InputText({super.key, this.title});
+  InputText({super.key, this.title, this.color});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: TextField(
-        style: const TextStyle(color: Colors.white),
+        style: TextStyle(color: color),
         decoration: InputDecoration(
-            focusedBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(4)),
-              borderSide: BorderSide(width: 1, color: Colors.white),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(4)),
+              borderSide: BorderSide(width: 1, color: color),
             ),
-            enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white, width: 2.0),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: color, width: 2.0),
             ),
-            hintStyle: const TextStyle(color: Colors.white),
+            hintStyle: TextStyle(color: color),
             hintText: title),
       ),
     );
