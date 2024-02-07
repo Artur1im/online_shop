@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:online_shop/bloc/shop_bloc.dart';
-import 'package:online_shop/page/test.dart';
+import 'package:online_shop/page/admin_page.dart';
 import 'package:online_shop/widget/card.dart';
 
 class Person extends StatefulWidget {
@@ -68,7 +68,8 @@ class _PersonState extends State<Person> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Test()),
+                      MaterialPageRoute(
+                          builder: (context) => const AdminPage()),
                     );
                   },
                   child: const Text('sdfdsfdsfdsfdsf'))
