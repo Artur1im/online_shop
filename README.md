@@ -1,16 +1,16 @@
-# online_shop
+# Project "online shop"
 
-A new Flutter project.
+## Description
+This is an online store project using Flutter. The app is designed for users who want to browse and buy products online.
 
-## Getting Started
+## Functionality
+- View the product catalog with the ability to filter and search.
+- Adding items to the cart and placing an order.
+- Integration with REST API for data exchange with the store server.
+- Implementation of the BLoC (Business Logic Component) pattern to manage the application state.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Technologies
+The project uses the following technologies:
+- Flutter for developing a cross-platform mobile application.
+- REST API for exchanging data with the store server.
+- Block library (BLoC) for managing application state.
