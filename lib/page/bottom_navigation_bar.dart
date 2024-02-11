@@ -3,7 +3,6 @@ import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_not
 import 'package:flutter/material.dart';
 import 'package:online_shop/page/cart.dart';
 import 'package:online_shop/page/drag_me.dart';
-import 'package:online_shop/page/loading.dart';
 import 'package:online_shop/page/home.dart';
 import 'package:online_shop/page/person.dart';
 
@@ -32,7 +31,7 @@ class _BottomNbState extends State<BottomNb> {
     const Cart(),
     Home(),
     Page4(),
-    MyLoadingScreen(),
+    const AlertDialog(),
   ];
 
   bool isDarkMode = false;
