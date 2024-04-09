@@ -1,6 +1,5 @@
 part of 'shop_bloc.dart';
 
-@immutable
 sealed class ShopState {}
 
 class ShopInitial extends ShopState {}

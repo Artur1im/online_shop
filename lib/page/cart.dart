@@ -51,7 +51,8 @@ class _CartState extends State<Cart> {
                     onPress: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Payment()),
+                        MaterialPageRoute(
+                            builder: (context) => const Payment()),
                       );
                     }),
                 const SizedBox(

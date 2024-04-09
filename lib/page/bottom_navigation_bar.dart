@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:online_shop/page/intro_page.dart';
 import 'package:online_shop/page/cart.dart';
 import 'package:online_shop/page/drag_me.dart';
 import 'package:online_shop/page/home.dart';
@@ -29,9 +30,9 @@ class _BottomNbState extends State<BottomNb> {
   final List<Widget> bottomBarPages = [
     const Person(),
     const Cart(),
-    Home(),
-    Page4(),
-    const AlertDialog(),
+    const Home(),
+    const Page4(),
+    const IntroPage(),
   ];
 
   bool isDarkMode = false;

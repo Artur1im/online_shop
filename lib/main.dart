@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:online_shop/model/cart_model.dart';
 import 'package:online_shop/page/bottom_navigation_bar.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,26 +15,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-        // MultiBlocProvider(
-        //   providers: [
-        //     BlocProvider(
-        //       create: (context) => ShopBloc(),
-        //       child:
-        MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      // theme: ThemeData(
-      //   // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //   useMaterial3: true,
-      // ),
-      theme: ThemeData.light(), // Используем тему светлого режима по умолчанию
-      darkTheme: ThemeData.dark(), //
-      home: const BottomNb(),
+    return ChangeNotifierProvider(
+      create: (context) => CartModel(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData.light(),
+        darkTheme: ThemeData.dark(),
+        home: const BottomNb(),
+      ),
     );
-    // )
-    // ],
-    // child: Text('Что то'),
-    // );
   }
 }

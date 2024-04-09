@@ -70,7 +70,7 @@ class _PersonState extends State<Person> {
                           builder: (context) => const AdminPage()),
                     );
                   },
-                  child: const Text('sdfdsfdsfdsfdsf'))
+                  child: const Text('Add Product'))
             ],
           ),
         ),
