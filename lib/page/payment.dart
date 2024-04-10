@@ -1,26 +1,38 @@
+// ignore_for_file: must_be_immutable
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:online_shop/widget/button.dart';
 import 'package:online_shop/widget/card.dart';
 import 'package:online_shop/widget/text.dart';
 
 class Payment extends StatefulWidget {
-  const Payment({super.key});
+  String totalPrise;
+  Payment({super.key, required this.totalPrise});
 
   @override
   State<Payment> createState() => PaymentState();
 }
 
 class PaymentState extends State<Payment> {
-// final ShopBloc shopBloc = ShopBloc();
+  int numBer = 0;
+  @override
+  void initState() {
+    super.initState();
+    generateRandomNumber();
+  }
+
+  void generateRandomNumber() {
+    var rng = Random();
+    setState(() {
+      numBer = rng.nextInt(10000000);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
-          //  BlocBuilder<ShopBloc, ShopState>(
-          //   bloc: shopBloc,
-          //   builder: (context, state) {
-          //     return
-          Container(
+      body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -33,17 +45,17 @@ class PaymentState extends State<Payment> {
             ),
           ),
           UniversalCard(
-            widget: const Column(
+            widget: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Заказ №7348',
-                  style: TextStyle(fontSize: 18),
+                  "Заказ номер:  $numBer",
+                  style: const TextStyle(fontSize: 18),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Row(
+                const Row(
                   children: [
                     Text(
                       'Количество ',
@@ -62,9 +74,9 @@ class PaymentState extends State<Payment> {
           const SizedBox(
             height: 15,
           ),
-          const BigText(
+          BigText(
             size: 30,
-            title: '1.200 \$',
+            title: widget.totalPrise,
           ),
           SizedBox(
               width: double.infinity,
@@ -116,8 +128,6 @@ class PaymentState extends State<Payment> {
             ),
           )),
         ]),
-        //   );
-        // },
       ),
     );
   }

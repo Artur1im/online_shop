@@ -1,9 +1,9 @@
 import 'dart:developer';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:online_shop/page/calculator_page.dart';
 import 'package:online_shop/page/intro_page.dart';
 import 'package:online_shop/page/cart.dart';
-import 'package:online_shop/page/drag_me.dart';
 import 'package:online_shop/page/home.dart';
 import 'package:online_shop/page/person.dart';
 
@@ -31,7 +31,7 @@ class _BottomNbState extends State<BottomNb> {
     const Person(),
     const Cart(),
     const Home(),
-    const Page4(),
+    const CalculatorPage(),
     const IntroPage(),
   ];
 

@@ -52,7 +52,9 @@ class _CartState extends State<Cart> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Payment()),
+                            builder: (context) => Payment(
+                                  totalPrise: '',
+                                )),
                       );
                     }),
                 const SizedBox(
